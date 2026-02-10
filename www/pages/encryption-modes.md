@@ -624,7 +624,7 @@ IPCrypt offers the following encryption modes:
                                                    |
                            +----------------+      |
                            |                |      |
-                           |   16-byte Key  |------+
+                           |   32-byte Key  |------+
                            |                |
                            +----------------+
                                                    |
@@ -709,8 +709,8 @@ IPCrypt offers the following encryption modes:
     from ipcrypt import IPCrypt
     import os
 
-    # Initialize with a 16-byte key
-    key = bytes.fromhex("000102030405060708090a0b0c0d0e0f")
+    # Initialize with a 32-byte key
+    key = bytes.fromhex("000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f")
     ipcrypt = IPCrypt(key)
 
     # Generate a random 16-byte tweak

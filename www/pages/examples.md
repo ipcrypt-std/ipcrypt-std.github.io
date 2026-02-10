@@ -16,7 +16,7 @@ Try IPCrypt directly in your browser with our interactive playground:
 <div class="card p-6 mb-8">
     <h3 class="text-xl font-bold mb-4">IPCrypt Playground</h3>
     <p class="mb-4">Experiment with different encryption modes and see the results in real-time.</p>
-    <a href="/examples/playground/" class="btn btn-primary">Open Playground</a>
+    <a href="/playground/" class="btn btn-primary">Open Playground</a>
 </div>
 
 ## Encryption Modes Comparison
