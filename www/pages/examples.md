@@ -191,7 +191,7 @@ The following examples demonstrate the four encryption modes of IPCrypt:
             <li>Maintains native IP address sizes (4 bytes for IPv4, 16 bytes for IPv6)</li>
             <li>Enables network-level analytics while protecting actual network identities</li>
             <li>Deterministic - same input always produces same output with same key</li>
-            <li>Uses 32-byte key for enhanced security</li>
+            <li>Uses 32-byte key (two independent 16-byte AES-128 keys)</li>
         </ul>
     </div>
 </div>
@@ -337,7 +337,7 @@ def get_data():
   "events": [
     {
       "timestamp": "2025-04-24T10:15:32Z",
-      "encrypted_ip": "08e0c289bff23b7cb349aadfe3bcef56221c384c7c217b16",
+      "encrypted_ip": "a73f4e19c0d285b6f1e8d3a7924bc50e61d7f83a4b92c1e5",
       "user_agent": "Mozilla/5.0...",
       "page": "/products",
       "action": "view"

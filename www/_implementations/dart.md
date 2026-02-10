@@ -1,7 +1,7 @@
 ---
 layout: implementation
 title: IPCrypt Dart Implementation
-description: Dart implementation of IPCrypt supporting all three encryption modes with native Dart SDK.
+description: Dart implementation of IPCrypt supporting all four encryption modes with native Dart SDK.
 permalink: /implementations/dart/
 language: Dart
 repository: https://github.com/elliotwutingfeng/ipcrypt
@@ -122,7 +122,7 @@ examples:
 
 ## IPCrypt Dart Implementation
 
-A Dart implementation of IPCrypt that provides IP address encryption and obfuscation methods following the IPCrypt specification. This implementation supports all three encryption modes and is designed for native Dart applications.
+A Dart implementation of IPCrypt that provides IP address encryption and obfuscation methods following the IPCrypt specification. This implementation supports all four encryption modes and is designed for native Dart applications.
 
 ## Installation
 
@@ -146,11 +146,12 @@ dart pub get
 
 ## Usage
 
-The Dart implementation provides three encryption methods as global functions:
+The Dart implementation provides encryption methods as global functions:
 
 1. `ipCryptDeterministic` - Deterministic encryption using AES-128
-2. `ipCryptNonDeterministic` - Non-deterministic encryption using KIASU-BC
-3. `ipCryptExtendedNonDeterministic` - Extended non-deterministic encryption
+2. `ipCryptPrefixPreserving` - Prefix-preserving encryption using dual AES-128
+3. `ipCryptNonDeterministic` - Non-deterministic encryption using KIASU-BC
+4. `ipCryptExtendedNonDeterministic` - Extended non-deterministic encryption
 
 ### Deterministic Encryption
 

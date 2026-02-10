@@ -51,7 +51,7 @@ permalink: /
             <div class="feature-card">
                 <h3 class="text-xl font-bold mb-3">Format Preservation</h3>
                 <p>
-                    Deterministic mode produces valid IP addresses, enabling encrypted addresses to flow through existing infrastructure without modification.
+                    Deterministic and prefix-preserving modes produce valid IP addresses, enabling encrypted addresses to flow through existing infrastructure without modification.
                 </p>
             </div>
             
@@ -181,7 +181,7 @@ permalink: /
                     <h3>ipcrypt-ndx</h3>
                     <span class="badge badge-orange">Extended non-deterministic</span>
                 </div>
-                <p class="example-description">32-byte output, unlimited operations per key</p>
+                <p class="example-description">32-byte output, ~2<sup>64</sup> operations per key</p>
                 <div class="example-samples">
                     <div class="sample">
                         <span class="input">192.168.1.1</span>

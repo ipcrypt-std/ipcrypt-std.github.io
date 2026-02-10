@@ -29,7 +29,7 @@ IPCrypt resolves these conflicts through purpose-built cryptographic techniques 
 
 - **Efficiency and Compactness**: All variants operate on exactly 128 bits, achieving single-block encryption speed
 - **High Usage Limits**: Non-deterministic variants safely handle ~4 billion (nd) to ~18 quintillion (ndx) operations per key
-- **Format Preservation**: Deterministic mode produces valid IP addresses that flow through existing infrastructure
+- **Format Preservation**: Deterministic and prefix-preserving modes produce valid IP addresses that flow through existing infrastructure
 - **Interoperability**: Identical results across implementations enable seamless data exchange
 
 ### For Privacy Advocates
@@ -99,15 +99,15 @@ Many organizations currently use flawed mechanisms to protect IP addresses:
 
 IPCrypt offers fundamental advantages:
 
-| Feature                     | Common Approaches           | IPCrypt                                     |
-| --------------------------- | --------------------------- | ------------------------------------------- |
-| Speed                       | Varies, often slow          | Single-block speed for network rates        |
-| Data Size                   | Often expands significantly | Compact: 16-32 bytes total                 |
+| Feature                     | Common Approaches           | IPCrypt                                    |
+| --------------------------- | --------------------------- | ------------------------------------------ |
+| Speed                       | Varies, often slow          | Single-block speed for network rates       |
+| Data Size                   | Often expands significantly | Compact: 4-32 bytes total                  |
 | Reversibility               | Usually one-way             | Fully reversible with key                  |
 | Security Analysis           | Often unclear               | Mathematically provable properties         |
 | Interoperability            | Usually proprietary         | Standardized across implementations        |
 | Privacy Guarantees          | Inconsistent                | Configurable: deterministic or randomized  |
-| Format Preservation         | Rarely supported            | Available in deterministic mode            |
+| Format Preservation         | Rarely supported            | Available in deterministic and pfx modes   |
 
 ## Real-World Applications
 
@@ -139,6 +139,7 @@ def log_network_event(client_ip, event_type, timestamp):
 ```
 
 **Benefits:**
+
 - Logs can still be analyzed for patterns and anomalies
 - IP addresses are protected from casual observation
 - Compliance with privacy regulations is improved
@@ -179,6 +180,7 @@ def prepare_data_for_sharing(attack_data):
 ```
 
 **Benefits:**
+
 - Attack patterns can be shared without exposing actual IP addresses
 - Each sharing instance uses different tweaks, preventing correlation
 - The original organization can still decrypt if needed
@@ -218,6 +220,7 @@ LIMIT 10;
 ```
 
 **Benefits:**
+
 - IP addresses are not stored in plaintext
 - Queries can still be performed efficiently using indexes
 - Analytics and grouping operations work as expected
@@ -264,6 +267,7 @@ class PrivacyCompliantAnalytics:
 ```
 
 **Benefits:**
+
 - Analytics can be collected without storing personal data
 - Unique visitor counting still works accurately
 - No need to obtain explicit consent for IP storage

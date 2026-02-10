@@ -1,7 +1,7 @@
 ---
 layout: implementation
 title: IPCrypt Python Implementation
-description: Reference implementation of IPCrypt in Python, supporting all three encryption modes.
+description: Reference implementation of IPCrypt in Python, supporting all four encryption modes.
 permalink: /implementations/python/
 language: Python
 repository: https://github.com/jedisct1/draft-denis-ipcrypt/tree/main/implementations/python
@@ -58,7 +58,7 @@ examples:
 
 ## IPCrypt Python Implementation
 
-The Python implementation serves as the reference implementation for IPCrypt. It provides all three encryption modes and is designed to be clear, well-documented, and easy to understand.
+The Python implementation serves as the reference implementation for IPCrypt. It provides all four encryption modes and is designed to be clear, well-documented, and easy to understand.
 
 ## Installation
 
@@ -83,11 +83,12 @@ cd draft-denis-ipcrypt/implementations/python
 
 ## Usage
 
-The Python implementation provides three separate classes for the different encryption modes:
+The Python implementation provides separate classes for the different encryption modes:
 
 1. `IPCryptDeterministic` - Deterministic encryption using AES-128
-2. `IPCryptNd` - Non-deterministic encryption using KIASU-BC
-3. `IPCryptNdx` - Non-deterministic extended encryption using AES-XTS
+2. `IPCryptPfx` - Prefix-preserving encryption using dual AES-128
+3. `IPCryptNd` - Non-deterministic encryption using KIASU-BC
+4. `IPCryptNdx` - Non-deterministic extended encryption using AES-XTS
 
 ### Deterministic Encryption
 

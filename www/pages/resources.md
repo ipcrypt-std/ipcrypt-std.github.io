@@ -25,11 +25,12 @@ To implement IPCrypt:
 
 1. **Choose an encryption mode** based on your requirements:
    - `ipcrypt-deterministic`: When you need format preservation or duplicate detection
+   - `ipcrypt-pfx`: When you need to preserve network structure for analytics
    - `ipcrypt-nd`: For general privacy protection with reasonable storage overhead
    - `ipcrypt-ndx`: For maximum privacy protection when storage permits
 2. **Generate appropriate keys**:
    - 16 bytes (128 bits) for deterministic and nd modes
-   - 32 bytes (256 bits) for ndx mode
+   - 32 bytes (256 bits) for pfx and ndx modes
 3. **For non-deterministic modes**, use uniformly random tweaks
 4. **Test against the specification's test vectors** to ensure correctness
 
@@ -37,12 +38,12 @@ To implement IPCrypt:
 
 ### Key Management Suggestions
 
-Good key management practices are important when using IPCrypt:
+Good key management practices are essential when using IPCrypt:
 
-- **Creating Keys**: Consider using a cryptographically secure random number generator
-- **Storing Keys**: Try to store keys securely, such as in a key management system
-- **Changing Keys**: Consider rotating keys periodically as a security practice
-- **Key Separation**: Use different keys for different applications or data sets
+- **Creating Keys**: Keys MUST be generated using a cryptographically secure random number generator (see RFC 4086)
+- **Storing Keys**: Store keys securely, such as in a key management system
+- **Changing Keys**: Rotate keys periodically as a security practice
+- **Key Separation**: Use different keys for different applications or data sets. The specification defines HKDF-based key derivation for deriving mode-specific keys from a single master key
 
 ### Helpful Tips
 
@@ -50,7 +51,7 @@ When working with IPCrypt, here are some suggestions that might be helpful:
 
 1. **Check IP Formats**: It's a good idea to make sure IP addresses are properly formatted before encryption
 2. **Handle Errors Kindly**: Consider how your code will respond if something unexpected happens
-3. **Think About Timing**: For security-sensitive applications, constant-time operations can help prevent timing analysis
+3. **Constant-time Operations**: Implementations MUST use constant-time operations to mitigate side-channel attacks
 4. **Test Your Code**: You might want to check your implementation against the examples in the specification
 5. **Performance Optimization**: All variants are designed for single-block speed critical for network-rate processing
 

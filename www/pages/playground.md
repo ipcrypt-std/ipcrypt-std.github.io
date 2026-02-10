@@ -23,7 +23,7 @@ permalink: /playground/
         <div class="mb-4">
             <label for="encryption-key" class="block mb-2 font-medium">Encryption Key (hex):</label>
             <input type="text" id="encryption-key" class="w-full p-2 border rounded" placeholder="Enter a 16-byte hex key (32 characters)" value="000102030405060708090a0b0c0d0e0f">
-            <p class="text-sm text-gray-600 mt-1" id="key-help">For deterministic and nd modes: 16 bytes (32 hex chars). For ndx mode: 32 bytes (64 hex chars). Default key provided for demonstration.</p>
+            <p class="text-sm text-gray-600 mt-1" id="key-help">For deterministic and nd modes: 16 bytes (32 hex chars). For pfx and ndx modes: 32 bytes (64 hex chars). Default key provided for demonstration.</p>
         </div>
         
         <div class="mb-4">

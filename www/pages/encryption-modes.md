@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IPCrypt Encryption Modes
-description: Detailed explanations of IPCrypt's encryption modes - deterministic, non-deterministic (nd), and extended non-deterministic (ndx).
+description: Detailed explanations of IPCrypt's four encryption modes - deterministic, prefix-preserving (pfx), non-deterministic (nd), and extended non-deterministic (ndx).
 permalink: /encryption-modes/
 ---
 
@@ -405,7 +405,11 @@ IPCrypt offers the following encryption modes:
     <div class="feature-list">
         <div class="feature-item">
             <div class="feature-icon">🔑</div>
-            <div class="feature-text"><strong>Key Requirement</strong>: Uses a 32-byte key for enhanced security</div>
+            <div class="feature-text"><strong>Key Requirement</strong>: Uses a 32-byte key split into two independent 16-byte AES-128 keys (K1 and K2) for the sum-of-permutations PRF construction</div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">⚠️</div>
+            <div class="feature-text"><strong>Critical Constraint</strong>: The two 16-byte halves of the key MUST NOT be identical. Using identical values for K1 and K2 causes the XOR operation to cancel out, returning the original IP address unchanged.</div>
         </div>
         <div class="feature-item">
             <div class="feature-icon">🔍</div>
