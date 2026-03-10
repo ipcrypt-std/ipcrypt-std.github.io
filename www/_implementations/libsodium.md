@@ -35,6 +35,29 @@ examples:
           /* Decrypt */
           crypto_ipcrypt_decrypt(decrypted_ip, encrypted_ip, key);
       }
+  - title: Prefix-Preserving Encryption (PFX)
+    description: Encrypt an IP address using prefix-preserving mode with dual AES-128
+    code: |
+      #include <sodium.h>
+
+      int main(void) {
+          unsigned char key[crypto_ipcrypt_pfx_KEYBYTES]; /* 32 bytes */
+          unsigned char ip[16], encrypted_ip[16], decrypted_ip[16];
+
+          if (sodium_init() < 0) return 1;
+
+          crypto_ipcrypt_pfx_keygen(key);
+
+          memset(ip, 0, 16);
+          ip[10] = 0xff; ip[11] = 0xff;
+          ip[12] = 192; ip[13] = 0; ip[14] = 2; ip[15] = 1;
+
+          /* Encrypt (output is same size as input) */
+          crypto_ipcrypt_pfx_encrypt(encrypted_ip, ip, key);
+
+          /* Decrypt */
+          crypto_ipcrypt_pfx_decrypt(decrypted_ip, encrypted_ip, key);
+      }
   - title: Non-Deterministic Encryption (ND)
     description: Encrypt an IP address using non-deterministic mode with KIASU-BC
     code: |
@@ -134,6 +157,20 @@ crypto_ipcrypt_encrypt(encrypted_ip, ip, key);
 crypto_ipcrypt_decrypt(decrypted_ip, encrypted_ip, key);
 ```
 
+### Prefix-Preserving Encryption (PFX)
+
+```c
+#include <sodium.h>
+
+unsigned char key[crypto_ipcrypt_pfx_KEYBYTES];  /* 32 bytes: two 16-byte keys */
+unsigned char ip[16], encrypted_ip[16], decrypted_ip[16];
+
+crypto_ipcrypt_pfx_keygen(key);
+
+crypto_ipcrypt_pfx_encrypt(encrypted_ip, ip, key);
+crypto_ipcrypt_pfx_decrypt(decrypted_ip, encrypted_ip, key);
+```
+
 ### Non-Deterministic Encryption (ND)
 
 ```c
@@ -174,6 +211,7 @@ crypto_ipcrypt_ndx_decrypt(decrypted_ip, encrypted, key);
 |---|---|---|
 | `crypto_ipcrypt_KEYBYTES` | 16 | Key size for deterministic and ND modes |
 | `crypto_ipcrypt_INPUTBYTES` | 16 | IP address size (IPv4-mapped IPv6) |
+| `crypto_ipcrypt_pfx_KEYBYTES` | 32 | Key size for PFX mode (two 16-byte keys) |
 | `crypto_ipcrypt_nd_BYTES` | 24 | ND ciphertext size (8-byte tweak + 16-byte ciphertext) |
 | `crypto_ipcrypt_ndx_KEYBYTES` | 32 | Key size for NDX mode |
 | `crypto_ipcrypt_ndx_BYTES` | 32 | NDX ciphertext size (16-byte tweak + 16-byte ciphertext) |
@@ -188,6 +226,18 @@ int crypto_ipcrypt_encrypt(unsigned char out[16], const unsigned char in[16],
 
 int crypto_ipcrypt_decrypt(unsigned char out[16], const unsigned char in[16],
                            const unsigned char k[crypto_ipcrypt_KEYBYTES]);
+```
+
+### Prefix-Preserving Encryption (PFX)
+
+```c
+void crypto_ipcrypt_pfx_keygen(unsigned char k[crypto_ipcrypt_pfx_KEYBYTES]);
+
+int crypto_ipcrypt_pfx_encrypt(unsigned char out[16], const unsigned char in[16],
+                                const unsigned char k[crypto_ipcrypt_pfx_KEYBYTES]);
+
+int crypto_ipcrypt_pfx_decrypt(unsigned char out[16], const unsigned char in[16],
+                                const unsigned char k[crypto_ipcrypt_pfx_KEYBYTES]);
 ```
 
 ### Non-Deterministic Encryption (ND)
@@ -230,6 +280,7 @@ The libsodium implementation includes:
 - IPv4 address encryption/decryption
 - IPv6 address encryption/decryption
 - Deterministic encryption (AES-128)
+- Prefix-preserving encryption (dual AES-128)
 - Non-deterministic encryption (KIASU-BC)
 - Extended non-deterministic encryption (AES-XTS)
 - Hardware-accelerated AES (AES-NI, ARMv8)
