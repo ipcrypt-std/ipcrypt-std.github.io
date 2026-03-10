@@ -127,6 +127,10 @@
     gap: 2rem;
 }
 
+.gap-16 {
+    gap: 4rem;
+}
+
 .text-center {
     text-align: center;
 }
