@@ -1,7 +1,7 @@
 ---
 layout: implementation
 title: IPCrypt libsodium Implementation
-description: High-performance C implementation of IPCrypt in libsodium, supporting all four encryption modes with hardware-accelerated AES.
+description: High-performance implementation of IPCrypt in libsodium, supporting all four encryption modes.
 permalink: /implementations/libsodium/
 language: C
 repository: https://github.com/jedisct1/libsodium

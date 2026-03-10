@@ -39,7 +39,7 @@ Below is a comprehensive list of all available IPCrypt implementations. Click on
     <div class="implementation-card">
         <span class="language-badge">C</span>
         <h3 class="text-xl font-bold">libsodium</h3>
-        <p>Production-ready implementation with hardware-accelerated AES.</p>
+        <p>High-performance implementation of IPCrypt.</p>
         <p class="text-sm text-gray-600 mt-2">
             <span class="text-primary">✓</span> Detailed documentation available
         </p>
