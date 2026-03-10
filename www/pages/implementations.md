@@ -35,6 +35,19 @@ Below is a comprehensive list of all available IPCrypt implementations. Click on
             <a href="https://github.com/jedisct1/ipcrypt2" class="btn btn-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
         </p>
     </div>
+
+    <div class="implementation-card">
+        <span class="language-badge">C</span>
+        <h3 class="text-xl font-bold">libsodium</h3>
+        <p>Production-ready implementation with hardware-accelerated AES.</p>
+        <p class="text-sm text-gray-600 mt-2">
+            <span class="text-primary">✓</span> Detailed documentation available
+        </p>
+        <p class="mt-4">
+            <a href="{{ site.baseurl }}/implementations/libsodium/" class="btn btn-primary btn-sm">Documentation</a>
+            <a href="https://github.com/jedisct1/libsodium" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </div>
     
     <div class="implementation-card">
         <span class="language-badge">Rust</span>
@@ -201,6 +214,17 @@ Below is a comprehensive list of all available IPCrypt implementations. Click on
             </tr>
             <tr>
                 <td class="py-2 px-4 border">C</td>
+                <td class="py-2 px-4 border">Native</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border text-center">✓</td>
+                <td class="py-2 px-4 border">ISC</td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border">C (libsodium)</td>
                 <td class="py-2 px-4 border">Native</td>
                 <td class="py-2 px-4 border text-center">✓</td>
                 <td class="py-2 px-4 border text-center">✓</td>
