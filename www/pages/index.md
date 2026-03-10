@@ -23,7 +23,7 @@ permalink: /
     <div class="container mx-auto px-4">
         <p class="text-center text-sm font-medium mb-6" style="color: var(--color-text-light); text-transform: uppercase; letter-spacing: 0.1em;">Trusted by</p>
         <div class="flex justify-center items-center flex-wrap" style="gap: 6rem;">
-            <a href="https://www.datadoghq.com/" target="_blank" rel="noopener" style="opacity: 0.7;">
+            <a href="https://vector.dev/docs/reference/vrl/functions/#ip-functions" target="_blank" rel="noopener" style="opacity: 0.7;">
                 <img src="{{ site.baseurl }}/assets/images/logo-datadog.png" alt="Datadog" style="height: 36px; width: auto;">
             </a>
             <a href="https://www.powerdns.com/" target="_blank" rel="noopener" style="opacity: 0.7;">
