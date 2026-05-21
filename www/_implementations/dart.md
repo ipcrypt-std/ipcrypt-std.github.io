@@ -338,8 +338,9 @@ The Dart implementation includes:
 - ✅ IPv4 address encryption/decryption
 - ✅ IPv6 address encryption/decryption
 - ✅ Deterministic encryption (AES-128)
+- ✅ Prefix-preserving encryption (dual AES-128)
 - ✅ Non-deterministic encryption (KIASU-BC)
-- ✅ Extended non-deterministic encryption
+- ✅ Extended non-deterministic encryption (AES-XTS)
 - ✅ Custom tweak support
 - ✅ Native Dart implementation (no external dependencies)
 

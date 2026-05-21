@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IPCrypt Implementations
-description: Explore the various implementations of IPCrypt across different programming languages, including Python, C, Rust, JavaScript, Go, Java, Ruby, Kotlin, AWK, Dart, Zig, PHP, and D.
+description: Explore the various implementations of IPCrypt across different programming languages, including Python, C, Rust, JavaScript, Go, Java, Lua, Swift, Elixir, Ruby, Kotlin, AWK, Dart, Zig, PHP, and D.
 permalink: /implementations/
 ---
 

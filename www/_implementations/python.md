@@ -5,6 +5,8 @@ description: Reference implementation of IPCrypt in Python, supporting all four 
 permalink: /implementations/python/
 language: Python
 repository: https://github.com/jedisct1/draft-denis-ipcrypt/tree/main/implementations/python
+package_manager: PyPI
+package_url: https://pypi.org/project/ipcrypt/
 examples:
   - title: Deterministic Encryption
     description: Encrypt an IP address using deterministic mode
@@ -62,11 +64,10 @@ The Python implementation serves as the reference implementation for IPCrypt. It
 
 ## Installation
 
-The Python implementation doesn't have any external dependencies beyond the Python standard library. You can simply copy the implementation files into your project or install them using pip:
+The reference implementation is published on PyPI:
 
 ```bash
-# Not yet available on PyPI - use direct installation from GitHub
-pip install git+https://github.com/jedisct1/draft-denis-ipcrypt.git#subdirectory=implementations/python
+pip install ipcrypt
 ```
 
 Alternatively, you can download the files directly:

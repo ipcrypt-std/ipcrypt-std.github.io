@@ -156,7 +156,8 @@ import os
 import json
 
 # Each organization uses their own key
-org_key = bytes.fromhex("0123456789abcdeffedcba9876543210")
+# ipcrypt-ndx requires a 32-byte key
+org_key = bytes.fromhex("0123456789abcdeffedcba98765432101032547698badcfeefcdab8967452301")
 ipcrypt = IPCrypt(org_key)
 
 def prepare_data_for_sharing(attack_data):

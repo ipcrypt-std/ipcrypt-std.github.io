@@ -764,7 +764,7 @@ IPCrypt offers the following encryption modes:
         </div>
         <div class="feature-item">
             <div class="feature-icon">5</div>
-            <div class="feature-text"><strong>Performance Considerations</strong>: Deterministic mode is fastest, followed by nd, ndx, and pfx</div>
+            <div class="feature-text"><strong>Performance Considerations</strong>: Deterministic mode is fastest, followed by nd, ndx, then pfx (which encrypts bit-by-bit)</div>
         </div>
         <div class="feature-item">
             <div class="feature-icon">6</div>

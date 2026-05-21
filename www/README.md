@@ -27,7 +27,7 @@ chmod +x setup.sh
 bundle exec jekyll serve
 ```
 
-Then open your browser and navigate to `http://localhost:4000/draft-denis-ipcrypt/`
+Then open your browser and navigate to `http://localhost:4000/`
 
 ## Manual Setup
 
@@ -55,7 +55,7 @@ Then open your browser and navigate to `http://localhost:4000/draft-denis-ipcryp
    bundle exec jekyll serve
    ```
 
-4. Open your browser and navigate to `http://localhost:4000/draft-denis-ipcrypt/`
+4. Open your browser and navigate to `http://localhost:4000/`
 
 ## Project Structure
 
