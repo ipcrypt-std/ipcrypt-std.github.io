@@ -41,8 +41,8 @@ Then open your browser and navigate to `http://localhost:4000/`
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jedisct1/draft-denis-ipcrypt.git
-   cd draft-denis-ipcrypt/www
+   git clone https://github.com/ipcrypt-std/ipcrypt-std.github.io.git
+   cd ipcrypt-std.github.io/www
    ```
 
 2. Install dependencies:

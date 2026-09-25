@@ -8,7 +8,7 @@ Your Jekyll site is located in the `www` directory, and your repository is now n
 
 ## Step 1: Repository Settings
 
-1. Go to your GitHub repository (`https://github.com/ipcrypt-std/www`)
+1. Go to your GitHub repository (`https://github.com/ipcrypt-std/ipcrypt-std.github.io`)
 2. Click on "Settings" tab
 3. In the left sidebar, click on "Pages"
 4. Under "Build and deployment" section:

@@ -230,7 +230,7 @@ For applications requiring integrity, add authentication mechanisms like HMAC or
 
 ### Tools You Might Find Useful
 
-- [Test Vector Generator](https://github.com/jedisct1/draft-denis-ipcrypt/tree/main/implementations/python/generate_test_vectors.py): A simple script to create test examples
+- [Test Vector Generator](https://github.com/ipcrypt-std/draft-denis-ipcrypt/tree/main/implementations/python/generate_test_vectors.py): A simple script to create test examples
 - [Interactive Playground]({{ site.baseurl }}/playground/): A web tool where you can try IPCrypt in your browser
 
 ### More Information

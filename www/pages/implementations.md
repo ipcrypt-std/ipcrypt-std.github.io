@@ -23,7 +23,7 @@ Below is a comprehensive list of all available IPCrypt implementations. Click on
         </p>
         <p class="mt-4">
             <a href="{{ site.baseurl }}/implementations/python/" class="btn btn-primary btn-sm">Documentation</a>
-            <a href="https://github.com/jedisct1/draft-denis-ipcrypt/tree/main/implementations/python" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/ipcrypt-std/draft-denis-ipcrypt/tree/main/implementations/python" class="btn btn-secondary btn-sm" target="_blank" rel="noopener">GitHub</a>
         </p>
     </div>
     
@@ -32,7 +32,7 @@ Below is a comprehensive list of all available IPCrypt implementations. Click on
         <h3 class="text-xl font-bold">C</h3>
         <p>High-performance implementation (ipcrypt2).</p>
         <p class="mt-4">
-            <a href="https://github.com/jedisct1/ipcrypt2" class="btn btn-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/ipcrypt-std/ipcrypt2" class="btn btn-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
         </p>
     </div>
 

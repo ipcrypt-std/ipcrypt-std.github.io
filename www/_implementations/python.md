@@ -4,7 +4,7 @@ title: IPCrypt Python Implementation
 description: Reference implementation of IPCrypt in Python, supporting all four encryption modes.
 permalink: /implementations/python/
 language: Python
-repository: https://github.com/jedisct1/draft-denis-ipcrypt/tree/main/implementations/python
+repository: https://github.com/ipcrypt-std/draft-denis-ipcrypt/tree/main/implementations/python
 package_manager: PyPI
 package_url: https://pypi.org/project/ipcrypt/
 examples:
@@ -73,7 +73,7 @@ pip install ipcrypt
 Alternatively, you can download the files directly:
 
 ```bash
-git clone https://github.com/jedisct1/draft-denis-ipcrypt.git
+git clone https://github.com/ipcrypt-std/draft-denis-ipcrypt.git
 cd draft-denis-ipcrypt/implementations/python
 ```
 
