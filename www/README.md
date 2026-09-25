@@ -104,7 +104,7 @@ The website is deployed to GitHub Pages automatically when changes are pushed to
 
 ## Contributing
 
-Contributions to the IPCrypt website are welcome! Please see the [CONTRIBUTING.md](../CONTRIBUTING.md) file in the root directory for guidelines.
+Contributions to the IPCrypt website are welcome!
 
 ### Development Workflow
 
